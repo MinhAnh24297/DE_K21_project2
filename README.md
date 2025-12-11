@@ -13,19 +13,20 @@ This is a high-performance web scraper for Tiki.vn product details, featuring mu
 - Generates fail_ids.txt for unreachable products
 
 # PROJECT STRUCTURE
-main.py -> Scrapes product info and saves to JSON
-clean_description_in_data.py -> Cleans HTML tags in descriptions
-product_ids.csv -> Input: product ID list
-output_products/ -> JSON batch output
-fail_ids.txt -> Failed IDs log
+- main.py -> Scrapes product info and saves to JSON
+- clean_description_in_data.py -> Cleans HTML tags in descriptions
+- product_ids.csv -> Input: product ID list
+- output_products/ -> JSON batch output
+- fail_ids.txt -> Failed IDs log
+- rerun_fail_ids.py -> Re-crawl the products in the failed-product ID list
 
 # INPUT FORMAT
-The file product_ids.csv must contain a single column named "id":
-Example:
-id
-123456
-234567
-345678
+The file product_ids.csv must contain a single column named "id":\n
+Example:\n
+id\n
+123456\n
+234567\n
+345678\n
 
 # RUNNING THE SCRAPER
 - Run the main scraper:
@@ -35,11 +36,11 @@ python clean_description_in_data.py
 
 # CONFIGURATION
 Editable values in main.py:
-BATCH_SIZE = 1000
-MAX_WORKERS = 10
-DELAY_BETWEEN_REQUESTS = 0.1
-RETRY_TOTAL = 3
-OUTPUT_DIR = "output_products"
+- BATCH_SIZE = 1000
+- MAX_WORKERS = 10
+- DELAY_BETWEEN_REQUESTS = 0.1
+- RETRY_TOTAL = 3
+- OUTPUT_DIR = "output_products"
 
 # OUTPUT EXAMPLE AFTER TWO PROCESSES
 {
