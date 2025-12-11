@@ -21,14 +21,12 @@ This is a high-performance web scraper for Tiki.vn product details, featuring mu
 - rerun_fail_ids.py -> Re-crawl the products in the failed-product ID list
 
 # INPUT FORMAT
-The file `product_ids.csv` must contain a single column named `"id"`:
-
-Example:
-
-id
-123456
-234567
-345678
+The file `product_ids.csv` must contain a single column named `"id"`:<br>
+Example:<br>
+id<br>
+123456<br>
+234567<br>
+345678<br>
 
 # RUNNING THE SCRAPER
 - Run the main scraper:
