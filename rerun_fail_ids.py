@@ -39,7 +39,6 @@ def load_product_ids_from_txt(path: str) -> List[str]:
 def extract_product_fields(raw: Dict[str, Any]) -> Dict[str, Any]:
     """
     Lọc các field cần: id, name, url_key, price, description, images (list url)
-    Cấu trúc thật sự của API có thể hơi khác -> bạn chỉnh lại nếu cần.
     """
     # Lấy price (tuỳ cấu trúc API)
     price = None
@@ -252,5 +251,6 @@ if __name__ == "__main__":
         print(f"Đã lưu {len(fail_product_ids)} ID lỗi vào fail_ids.txt")
         # Các vòng sau luôn dùng fail_ids.txt làm input
         current_input = "fail_ids_rerun.txt"
+
 
     print("\n===== HOÀN TẤT TẤT CẢ CÁC VÒNG =====")
